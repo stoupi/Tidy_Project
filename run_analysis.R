@@ -44,7 +44,5 @@ tidy_dataset_2 <- tidy_dataset[, lapply(.SD, FUN=mean), by=.(activity, subject)]
 write.table(tidy_dataset_2, file = "tidy_dataset.txt", sep = "\t",
             col.names = TRUE)
 
-# Create the code book
-features_updated <- names(tidy_dataset_2)
 
 
