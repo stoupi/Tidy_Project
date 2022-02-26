@@ -42,7 +42,7 @@ tidy_dataset <- cbind(tidy_dataset,subject_merged)
 
 tidy_dataset_2 <- tidy_dataset[, lapply(.SD, FUN=mean), by=.(activity, subject)]
 write.table(tidy_dataset_2, file = "tidy_dataset.txt", sep = "\t",
-            col.names = TRUE)
+            col.names = TRUE, row.names = FALSE)
 
 
 
